@@ -1,7 +1,7 @@
 import streamlit as st
 
-from sklearn.ensemble import FlorestaRandomica
-import pandas as pd
+from sklearn.naive_bayes import FlorestaRandomica
+import pandas as st
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 
