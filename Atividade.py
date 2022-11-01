@@ -1,5 +1,5 @@
 from sklearn.naive_bayes import  GaussianNB
-import numpy as np
+import streamlit as st
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 classes = dados['Species'] 
