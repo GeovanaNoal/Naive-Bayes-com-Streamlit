@@ -30,14 +30,21 @@ features_treino,features_teste,classes_treino,classes_teste = train_test_split(f
 
 
 model = NaveBayes()
-model.fit(x_train, y_train)
-teste = np.array([[2,7],[1,2],[-2,0],[-4,1]])
-predicted = model.predict(teste)
+floresta.fit(features_treino,classes_treino)
+predicoes = model.predict(features_teste)
+
 print(predicted)
 from sklearn import metrics
 print("FlorestaRandomica Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
 
-
+st.title('Aplicativo de IA')
+SepalLengthCm = st.number_input('Digite o comprimento do caule')
+SepalWidthCm = st.number_input('Digite a largura do caule')
+PetalLengthCm = st.number_input('Digite o comprimento da petala')
+PetalWidthCm = st.number_input('Digite a largura da petala')
+if st.button('Clique aqui'):
+  resultado = floresta.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+  st.write('Resultado:',resultado)
 
 
 
