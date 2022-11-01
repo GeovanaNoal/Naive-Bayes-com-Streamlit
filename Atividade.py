@@ -11,7 +11,12 @@ dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 #import streamlit as st
 #dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
-classes = dados['Species'] 
+
+classes = dados['Species']
+nomesColunas = dados.columns.to_list()
+tamanho = len(nomesColunas)
+nomesColunas = nomesColunas[1:tamanho-1]
+features = dados[nomesColunas]
 
 #x = np.array([[1,2],[1,2],[1,2],[-2,0],[2,3],[-4,0],[-1,1],[1,2],[-2,2],[2,7],[-4,1],[0,0]])
 #y = np.array([1, 2, 6, 7, 2, 9, 3, 13, 8, 10, 4,7 ])
