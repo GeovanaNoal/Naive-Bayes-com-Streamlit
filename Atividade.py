@@ -1,6 +1,15 @@
-from sklearn.naive_bayes import  GaussianNB
 import streamlit as st
+
+from sklearn.ensemble import NaiveBayesClassifier 
+import pandas as pd
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
+
+
+
+
+#from sklearn.naive_bayes import  GaussianNB
+#import streamlit as st
+#dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 classes = dados['Species'] 
 
