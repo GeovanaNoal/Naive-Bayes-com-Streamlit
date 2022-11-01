@@ -22,7 +22,12 @@ features = dados[nomesColunas]
 #y = np.array([1, 2, 6, 7, 2, 9, 3, 13, 8, 10, 4,7 ])
 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
+#x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
+features_treino,features_teste,classes_treino,classes_teste = train_test_split(features,
+                                                                               classes,
+                                                                               test_size=0.3,
+                                                                               random_state=1)
+
 
 model = NaveBayes()
 model.fit(x_train, y_train)
@@ -31,3 +36,8 @@ predicted = model.predict(teste)
 print(predicted)
 from sklearn import metrics
 print("FlorestaRandomica Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
+
+
+
+
+
