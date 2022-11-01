@@ -1,6 +1,6 @@
 import streamlit as st
 
-from sklearn.ensemble import NaiveBayesClassifier 
+from sklearn.ensemble import FlorestaRandomica
 import pandas as pd
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
@@ -25,4 +25,4 @@ teste = np.array([[2,7],[1,2],[-2,0],[-4,1]])
 predicted = model.predict(teste)
 print(predicted)
 from sklearn import metrics
-print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
+print("FlorestaRandomica Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
