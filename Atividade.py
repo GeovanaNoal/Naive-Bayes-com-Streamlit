@@ -20,7 +20,7 @@ features_treino,features_teste,classes_treino,classes_teste = train_test_split(f
                                                                                test_size=0.26,
                                                                                random_state=3)
 
-floresta = RandomForestClassifier(n_estimators=90) 
+floresta = GaussianNB(n_estimators=90) 
 
 floresta.fit(features_treino,classes_treino)
 predicoes = floresta.predict(features_teste)
