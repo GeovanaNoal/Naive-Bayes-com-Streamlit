@@ -20,10 +20,10 @@ features_treino,features_teste,classes_treino,classes_teste = train_test_split(f
                                                                                test_size=0.3,
                                                                                random_state=1)
 
-floresta = GaussianNB(n_estimators=90) 
+model = GaussianNB(n_estimators=90) 
 
-floresta.fit(features_treino,classes_treino)
-predicoes = floresta.predict(features_teste)
+model.fit(features_treino,classes_treino)
+predicoes = model.predict(features_teste)
 
 
 st.title('Aplicativo de IA')
@@ -32,7 +32,7 @@ SepalWidthCm = st.number_input('Digite a largura do caule')
 PetalLengthCm = st.number_input('Digite o comprimento da petala')
 PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
-  resultado = floresta.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+  resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   st.write('Resultado:',resultado)
   print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
 
