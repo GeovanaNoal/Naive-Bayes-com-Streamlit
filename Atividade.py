@@ -32,10 +32,9 @@ SepalWidthCm = st.number_input('Digite a largura do caule')
 PetalLengthCm = st.number_input('Digite o comprimento da petala')
 PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
-  resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+  resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm,Species]])
   st.write('Resultado:',resultado)
-  st.image('iris_versicolor.jpg')
-  st.image('iris_virginica.jpg')
+if resultado == ('Iris-setosa'):
   st.image('iris_setosa.jpg')
   
   
