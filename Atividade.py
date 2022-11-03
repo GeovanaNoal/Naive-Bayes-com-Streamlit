@@ -17,8 +17,8 @@ from sklearn.model_selection import train_test_split
 
 features_treino,features_teste,classes_treino,classes_teste = train_test_split(features,
                                                                                classes,
-                                                                               test_size=0.26,
-                                                                               random_state=3)
+                                                                               test_size=0.3,
+                                                                               random_state=1)
 
 floresta = GaussianNB(n_estimators=90) 
 
@@ -34,6 +34,7 @@ PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
   resultado = floresta.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   st.write('Resultado:',resultado)
+  print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
 
 
 
