@@ -1,15 +1,10 @@
 import streamlit as st
 
-from sklearn.naive_bayes import FlorestaRandomica
-import pandas as st
+from sklearn.naive_bayes import GaussianNB
+import numpy as np
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 
-
-
-#from sklearn.naive_bayes import  GaussianNB
-#import streamlit as st
-#dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 
 classes = dados['Species']
@@ -18,24 +13,18 @@ tamanho = len(nomesColunas)
 nomesColunas = nomesColunas[1:tamanho-1]
 features = dados[nomesColunas]
 
-#x = np.array([[1,2],[1,2],[1,2],[-2,0],[2,3],[-4,0],[-1,1],[1,2],[-2,2],[2,7],[-4,1],[0,0]])
-#y = np.array([1, 2, 6, 7, 2, 9, 3, 13, 8, 10, 4,7 ])
-
 from sklearn.model_selection import train_test_split
-#x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=1)
+
 features_treino,features_teste,classes_treino,classes_teste = train_test_split(features,
                                                                                classes,
-                                                                               test_size=0.3,
-                                                                               random_state=1)
+                                                                               test_size=0.26,
+                                                                               random_state=3)
 
+floresta = RandomForestClassifier(n_estimators=90) 
 
-model = NaveBayes()
 floresta.fit(features_treino,classes_treino)
-predicoes = model.predict(features_teste)
+predicoes = floresta.predict(features_teste)
 
-print(predicted)
-from sklearn import metrics
-print("FlorestaRandomica Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
 
 st.title('Aplicativo de IA')
 SepalLengthCm = st.number_input('Digite o comprimento do caule')
