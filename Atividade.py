@@ -34,8 +34,22 @@ PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   st.write('Resultado:',resultado)
-  #print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
+  st.image('iris_setosa.jpg')
+  
 
+  
+  
+  #if st.button('Calcular'):
+  #imc = peso/(altura*altura)
+  #if imc < 18.5:
+    #st.write('O seu IMC vale',imc,'e esta abaixo do peso')
+    #st.image('abaixoPeso.jpg')
+  #if imc >=18.5 and imc < 25:
+    #st.write('O seu IMC vale',imc,'e esta com peso normal')
+    #st.image('pesoNormal.png')
+  #if imc >= 25:
+    #st.write('O seu IMC vale',imc,'e esta acima do peso')
+    #st.image('acimaPeso.png')
   
   
 
