@@ -1,7 +1,7 @@
 import streamlit as st
 
 from sklearn.naive_bayes import GaussianNB
-import numpy as np
+import pandas as pd
 dados = pd.read_csv('Iris_Floresta_Randomica.csv')
 
 
