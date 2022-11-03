@@ -34,7 +34,7 @@ PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   st.write('Resultado:',resultado)
-  print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted)*100)
+  print("Gaussian Naive Bayes model accuracy(in %):", metrics.accuracy_score(y_test, predicted))
 
   
   
