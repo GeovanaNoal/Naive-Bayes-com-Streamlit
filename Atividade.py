@@ -20,7 +20,7 @@ features_treino,features_teste,classes_treino,classes_teste = train_test_split(f
                                                                                test_size=0.3,
                                                                                random_state=1)
 
-model = GaussianNB(n_estimators=90) 
+model = GaussianNB() 
 
 model.fit(features_treino,classes_treino)
 predicoes = model.predict(features_teste)
