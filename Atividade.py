@@ -40,7 +40,7 @@ if st.button('Clique aqui'):
   if resultado == ('Iris-versicolor'):
     st.image('iris_versicolor.jpg')
     print(versicolor)
-   if resultado == ('	Iris-virginica'):
+   if resultado == ('Iris-virginica'):
     st.image('iris_virginica')
     print(virginica)
   
