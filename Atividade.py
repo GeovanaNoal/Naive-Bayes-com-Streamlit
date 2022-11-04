@@ -33,4 +33,18 @@ PetalLengthCm = st.number_input('Digite o comprimento da petala')
 PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+  
+  if resultado == 'Iris-setosa'
+    st.image('iris_setosa.jpg)
+  
+  
+  #if imc < 18.5:
+    #st.write('O seu IMC vale',imc,'e esta abaixo do peso')
+    #st.image('abaixoPeso.jpg')
+  #if imc >=18.5 and imc < 25:
+    #st.write('O seu IMC vale',imc,'e esta com peso normal')
+    #st.image('pesoNormal.png')
+  if imc >= 25:
+    st.write('O seu IMC vale',imc,'e esta acima do peso')
+    st.image('acimaPeso.png')
   st.write('Resultado:',resultado)
