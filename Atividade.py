@@ -33,7 +33,9 @@ PetalLengthCm = st.number_input('Digite o comprimento da petala')
 PetalWidthCm = st.number_input('Digite a largura da petala')
 if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
+if resultado <= 0.8:  
   st.write('Resultado:',resultado)
+  st.image('iris_setosa.jpg')
   
   
 
