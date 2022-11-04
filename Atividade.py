@@ -44,7 +44,7 @@ if st.button('Clique aqui'):
   #if imc >=18.5 and imc < 25:
     #st.write('O seu IMC vale',imc,'e esta com peso normal')
     #st.image('pesoNormal.png')
-  if imc >= 25:
-    st.write('O seu IMC vale',imc,'e esta acima do peso')
-    st.image('acimaPeso.png')
-  st.write('Resultado:',resultado)
+  #if imc >= 25:
+    #st.write('O seu IMC vale',imc,'e esta acima do peso')
+    #st.image('acimaPeso.png')
+  #st.write('Resultado:',resultado)
