@@ -35,7 +35,7 @@ if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   
   if resultado == ('Iris-setosa'):
-    st.image('iris_setosa.jpg)
+    st.image('iris_setosa.jpg')
   
   
   #if imc < 18.5:
