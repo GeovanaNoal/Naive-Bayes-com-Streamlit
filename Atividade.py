@@ -35,14 +35,17 @@ if st.button('Clique aqui'):
   resultado = model.predict([[SepalLengthCm,SepalWidthCm,PetalLengthCm,PetalWidthCm]])
   
   if resultado == ('Iris-setosa'):
+    st.write('setosa')
     st.image('iris_setosa.jpg')
-    print('setosa')
+    
   if resultado == ('Iris-versicolor'):
+    st.write('versicolor')
     st.image('iris_versicolor.jpg')
-    print('versicolor')
+   
   if resultado == ('Iris-virginica'):
+    st.write('virginica')
     st.image('iris_virginica.jpg')
-    print('virginica')
+    
   
   
   
