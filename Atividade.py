@@ -36,15 +36,14 @@ if st.button('Clique aqui'):
   
   if resultado == ('Iris-setosa'):
     st.image('iris_setosa.jpg')
+    print(setosa)
+  if resultado == ('Iris-versicolor'):
+    st.image('iris_versicolor.jpg')
+    print(versicolor)
+   if resultado == ('Iris-virginica'):
+    st.image('iris_virginica')
+    print(virginica)
   
   
-  #if imc < 18.5:
-    #st.write('O seu IMC vale',imc,'e esta abaixo do peso')
-    #st.image('abaixoPeso.jpg')
-  #if imc >=18.5 and imc < 25:
-    #st.write('O seu IMC vale',imc,'e esta com peso normal')
-    #st.image('pesoNormal.png')
-  #if imc >= 25:
-    #st.write('O seu IMC vale',imc,'e esta acima do peso')
-    #st.image('acimaPeso.png')
-  #st.write('Resultado:',resultado)
+  
+  
